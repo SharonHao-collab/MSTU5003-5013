@@ -42,7 +42,15 @@ Selected important prompts from my request:
 
 ## My reflection — write this section yourself
 
-**What I wanted visitors to experience:** [Write your own 1–2 paragraph reflection here. What feeling or question motivated your design?]
+**What I wanted visitors to experience:** [**What I observed when I tested it:**  
+I tested the 5-minute egg with Quick demo turned off, and I tested the other seven options with Quick demo turned on. I expected the page to show the 3–2–1 sequence, start the timer, and then display “[egg name] is ready!” with the correct illustration, serving suggestion, and “Try another egg” button. The interaction worked as expected, but I noticed that the 10-, 11-, and 12-minute eggs looked less appetizing than the softer eggs.
+
+I revised the illustrations several times. First, I asked Codex to use warmer colors and softer shapes, but the revised yolks looked strange and their textures were still unclear. I then provided a visual reference and requested a soft, realistic digital food illustration style. Although the shapes became cleaner, the yolks still appeared slightly mustard-colored or greenish. This made me realize that general descriptions such as “warm” or “appetizing” were not precise enough. For the final revision, I created a specific color palette for each yolk, moving from warm golden yellow at 10 minutes to a lighter creamy yellow at 12 minutes. I also requested a few subtle hairline cracks instead of scattered dots or deep lines. After testing the final version, the three yolks looked warmer and more appetizing, while the gradual change from firm to fully cooked remained clear.
+
+Codex helped me build the countdown and timer, connect each selection to the correct result, and translate my visual instructions into SVG and CSS. I still needed to evaluate the results, identify why the images felt wrong, and decide how the colors and textures should change. Giving Codex exact color values showed me that more specific communication could produce a result that was much closer to my intention.
+
+**What I would improve next:**  
+I would add a small sound or animation when the egg is ready because it would make the end of the countdown clearer and make the experience feel more playful and rewarding.]
 
 **What I observed when I tested it:** [Describe your own tests, surprises, problems, and changes. Do not fill this in until you personally try the page.]
 

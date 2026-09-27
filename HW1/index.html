@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7ed">
+  <title>The Little Egg Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section id="choices-view" class="view" aria-labelledby="page-title">
+      <header class="hero">
+        <p class="eyebrow">A tiny interactive kitchen</p>
+        <h1 id="page-title">The Little <em>Egg</em> Lab</h1>
+        <p class="hero-copy">How do you like your boiled egg? Pick a texture, press <strong>Boil me</strong>, and watch it cook.</p>
+        <label class="demo-control">
+          <input id="quick-demo" type="checkbox">
+          <span class="switch" aria-hidden="true"></span>
+          <span class="demo-text"><strong>Quick demo</strong><small>Simulation: finishes in about 10 seconds</small></span>
+        </label>
+      </header>
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Choose your egg</p>
+          <h2>From dippy to done</h2>
+        </div>
+        <p>Eight little possibilities</p>
+      </div>
+      <div id="egg-grid" class="egg-grid"></div>
+      <p class="footnote">Times and textures are illustrative. Egg size, temperature, and altitude can change real results.</p>
+    </section>
+
+    <section id="cooking-view" class="view stage-view" aria-labelledby="stage-title" hidden>
+      <div class="stage-card">
+        <p class="eyebrow">Your egg is on its way</p>
+        <h2 id="stage-title" tabindex="-1">Getting ready</h2>
+        <p id="selected-label" class="stage-selection"></p>
+        <div class="stage-visual" aria-hidden="true">
+          <div class="pot">
+            <span class="bubble bubble-one"></span>
+            <span class="bubble bubble-two"></span>
+            <span class="bubble bubble-three"></span>
+            <span class="pot-egg"></span>
+          </div>
+        </div>
+        <p id="countdown-number" class="big-number" aria-live="polite"></p>
+        <p id="timer-number" class="big-number timer-number" role="timer" aria-live="off" hidden></p>
+        <p id="stage-status" class="stage-status" aria-live="polite"></p>
+        <p id="demo-note" class="demo-note" hidden>Quick demo is a simulation. Your chosen egg still gets its own result.</p>
+      </div>
+    </section>
+
+    <section id="result-view" class="view stage-view" aria-labelledby="result-title" hidden>
+      <div class="result-card">
+        <p class="eyebrow">Ding! It's ready</p>
+        <h2 id="result-title" tabindex="-1">Your egg is ready</h2>
+        <div id="result-art" class="result-art" aria-hidden="true"></div>
+        <p id="result-minutes" class="result-minutes"></p>
+        <p id="result-texture" class="result-texture"></p>
+        <div class="serving-box">
+          <span aria-hidden="true">✦</span>
+          <p id="result-serving"></p>
+        </div>
+        <button id="try-another" class="primary-button" type="button">Try another egg <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

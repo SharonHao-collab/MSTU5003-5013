@@ -1,13 +1,25 @@
 /* Edit these eight objects to change the words, times, or serving ideas. */
 const eggs = [
-  { minutes: 5, name: "The Dipper", texture: "Very runny, bright yolk with a soft white.", serving: "Dip warm toast fingers into the golden center.", color: "#f49a2d", edge: "#f8bd4f", yolk: "M85 79 C111 68 136 89 134 117 C133 142 117 149 111 162 C105 175 92 171 84 161 C68 164 51 149 49 130 C45 106 62 84 85 79 Z" },
-  { minutes: 6, name: "The Jammy One", texture: "A runny, jammy center inside a set white.", serving: "Spoon it over a bowl of rice with a pinch of salt.", color: "#ee922f", edge: "#fac560", yolk: "M90 77 C117 77 136 98 135 124 C134 148 116 164 91 163 C65 163 48 145 49 121 C50 96 65 78 90 77 Z" },
-  { minutes: 7, name: "The Soft Set", texture: "A thicker yolk that is softly set.", serving: "Halve it over a leafy salad.", color: "#eaa13e", edge: "#f7ca71", yolk: "M90 79 C113 78 132 97 132 121 C132 146 114 160 90 160 C65 160 50 143 50 121 C50 98 67 80 90 79 Z" },
-  { minutes: 8, name: "The Mellow Middle", texture: "Mostly set, with a slightly moist center.", serving: "Add it to a cozy bowl of noodle soup.", color: "#e9ac52", edge: "#f3d28a", yolk: "M90 80 C113 80 130 97 130 121 C130 144 113 159 90 159 C67 159 50 144 50 121 C50 98 67 80 90 80 Z" },
-  { minutes: 9, name: "The Tender One", texture: "Tender yolk, fully set from edge to center.", serving: "Slice it onto avocado toast.", color: "#e8b65e", edge: "#f0d594", yolk: "M90 81 C112 81 129 98 129 121 C129 144 112 158 90 158 C68 158 51 144 51 121 C51 98 68 81 90 81 Z" },
-  { minutes: 10, name: "The Classic", texture: "A firm, sunny yolk.", serving: "Sprinkle with paprika for a simple snack.", color: "#dfad54", edge: "#ebcf83", yolk: "M90 82 C111 82 128 99 128 121 C128 143 111 157 90 157 C69 157 52 143 52 121 C52 99 69 82 90 82 Z" },
-  { minutes: 11, name: "The Crumbly One", texture: "Firmer yolk with a slightly drier bite.", serving: "Chop it into a potato salad.", color: "#d6a654", edge: "#e6cb8c", yolk: "M90 82 C111 82 127 99 127 121 C127 142 111 156 90 156 C69 156 53 142 53 121 C53 99 69 82 90 82 Z" },
-  { minutes: 12, name: "The Fully Done", texture: "Fully firm yolk, ready for anything.", serving: "Mash it with a little mayo for a sandwich.", color: "#cfa25a", edge: "#e0c792", yolk: "M90 83 C110 83 126 99 126 121 C126 142 110 155 90 155 C70 155 54 142 54 121 C54 99 70 83 90 83 Z" }
+  { minutes: 5, name: "The Dipper", texture: "Very runny, bright yolk with a soft white.", serving: "Dip warm toast fingers into the golden center." },
+  { minutes: 6, name: "The Jammy One", texture: "A runny, jammy center inside a set white.", serving: "Spoon it over a bowl of rice with a pinch of salt." },
+  { minutes: 7, name: "The Soft Set", texture: "A thicker yolk that is softly set.", serving: "Halve it over a leafy salad." },
+  { minutes: 8, name: "The Mellow Middle", texture: "Mostly set, with a slightly moist center.", serving: "Add it to a cozy bowl of noodle soup." },
+  { minutes: 9, name: "The Tender One", texture: "Tender yolk, fully set from edge to center.", serving: "Slice it onto avocado toast." },
+  { minutes: 10, name: "The Classic", texture: "A firm, sunny yolk.", serving: "Sprinkle with paprika for a simple snack." },
+  { minutes: 11, name: "The Crumbly One", texture: "Firmer yolk with a slightly drier bite.", serving: "Chop it into a potato salad." },
+  { minutes: 12, name: "The Fully Done", texture: "Fully firm yolk, ready for anything.", serving: "Mash it with a little mayo for a sandwich." }
+];
+
+/* One illustration recipe; only these texture settings change by cooking time. */
+const eggArtStyles = [
+  { center: "#ef7a0d", middle: "#e96b0b", rim: "#f6ae3d", wet: "#ec650a", wetEdge: "#d94d0b", wetRadius: 31, gloss: 0.9, grain: 0, label: "deep orange, very glossy liquid yolk" },
+  { center: "#f18a18", middle: "#ed7c11", rim: "#f6b849", wet: "#e9710d", wetEdge: "#df5d0d", wetRadius: 27, gloss: 0.72, grain: 0, label: "glossy orange jammy yolk" },
+  { center: "#ef9825", middle: "#e98b1d", rim: "#f6c157", wet: "#e58217", wetEdge: "#df7416", wetRadius: 20, gloss: 0.43, grain: 0, label: "thick creamy orange yolk" },
+  { center: "#eda737", middle: "#e99b2a", rim: "#f6c969", wet: "#df8d1c", wetEdge: "#da8318", wetRadius: 11, gloss: 0.17, grain: 0, label: "mostly set golden yolk with a small moist center" },
+  { center: "#edb64c", middle: "#e6aa3b", rim: "#f5d27c", wet: "", wetEdge: "", wetRadius: 0, gloss: 0, grain: 0, label: "smooth, tender, fully set golden yolk" },
+  { center: "#FFE08A", middle: "#F4C44E", rim: "#DFA12C", wet: "", wetEdge: "", wetRadius: 0, gloss: 0, grain: 0, label: "smooth firm golden-yellow yolk with a soft highlight" },
+  { center: "#FFE7A3", middle: "#F2CD67", rim: "#DCA83E", wet: "", wetEdge: "", wetRadius: 0, gloss: 0, grain: 0, label: "warm matte-yellow yolk with two delicate hairline marks" },
+  { center: "#FFF0BE", middle: "#F0D58A", rim: "#D7B65B", wet: "", wetEdge: "", wetRadius: 0, gloss: 0, grain: 0, label: "fully firm creamy-yellow yolk with three fine hairline marks" }
 ];
 
 const choicesView = document.getElementById("choices-view");
@@ -28,21 +40,61 @@ let countdownEndsAt = 0;
 let cookingEndsAt = 0;
 
 function eggSVG(egg, size) {
-  const id = "yolk-" + egg.minutes + "-" + size;
-  const highlight = egg.minutes <= 8
-    ? '<ellipse cx="77" cy="104" rx="14" ry="8" fill="#fff5bd" opacity=".55" transform="rotate(-25 77 104)"/>'
+  const art = eggArtStyles[egg.minutes - 5];
+  const id = egg.minutes + "-" + size;
+  const imageText = egg.minutes + "-minute boiled egg half; " + art.label + ".";
+  const yolkOutline = egg.minutes >= 10 ? art.rim : "#e0af62";
+  const yolkShade = egg.minutes >= 10 ? art.rim : "#a96925";
+
+  // The same egg is used on the card and result view; only its display size changes.
+  let texture = "";
+  if (egg.minutes === 10) {
+    texture = '<ellipse cx="76" cy="103" rx="17" ry="8" fill="' + art.center +
+      '" opacity="0.35" filter="url(#soft-' + id + ')"/>';
+  } else if (egg.minutes === 11) {
+    texture = '<path d="M79 112 C82 111 82 114 86 112 M95 129 C97 126 99 128 101 125" fill="none" stroke="' +
+      art.rim + '" stroke-width="1.2" stroke-linecap="round" opacity="0.3"/>';
+  } else if (egg.minutes === 12) {
+    texture = '<path d="M77 112 C80 110 81 113 84 110 M92 123 C95 121 96 124 99 121 M84 136 C87 134 88 136 91 133" fill="none" stroke="' +
+      art.rim + '" stroke-width="1.3" stroke-linecap="round" opacity="0.37"/>';
+  }
+
+  const moistCenter = art.wetRadius
+    ? '<ellipse cx="90" cy="121" rx="' + art.wetRadius + '" ry="' +
+      (art.wetRadius * 0.94).toFixed(1) + '" fill="url(#wet-' + id +
+      ')" opacity="0.95" filter="url(#soft-' + id + ')"/>'
     : '';
-  const speckles = egg.minutes >= 11
-    ? '<circle cx="74" cy="107" r="2.5" fill="#fff1b7" opacity=".75"/><circle cx="106" cy="132" r="3" fill="#fff1b7" opacity=".7"/><circle cx="91" cy="144" r="2" fill="#fff1b7" opacity=".7"/>'
+  const shine = art.gloss
+    ? '<path d="M65 106 C71 96 82 91 93 93" fill="none" stroke="#fff8d8" stroke-width="5" stroke-linecap="round" opacity="' +
+      art.gloss + '"/><ellipse cx="73" cy="107" rx="9" ry="4" fill="#fff8d8" opacity="' +
+      (art.gloss * 0.34).toFixed(2) + '" filter="url(#soft-' + id + ')"/>'
     : '';
-  return '<svg viewBox="0 0 180 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
-    '<defs><radialGradient id="' + id + '" cx="45%" cy="40%" r="65%">' +
-    '<stop offset="0%" stop-color="' + egg.edge + '"/>' +
-    '<stop offset="100%" stop-color="' + egg.color + '"/></radialGradient></defs>' +
-    '<path d="M90 13 C128 13 166 65 168 116 C170 174 137 209 90 209 C43 209 10 174 12 116 C14 65 52 13 90 13 Z" fill="#f4e9d5" stroke="#e6d3b9" stroke-width="3"/>' +
-    '<path d="M90 22 C123 22 158 68 159 117 C160 168 132 199 90 199 C48 199 20 168 21 117 C22 68 57 22 90 22 Z" fill="#fffefa"/>' +
-    '<path d="' + egg.yolk + '" fill="url(#' + id + ')" stroke="' + egg.color + '" stroke-width="2"/>' +
-    highlight + speckles + '</svg>';
+
+  return [
+    '<svg viewBox="0 0 180 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title-' + id + '">',
+    '<title id="title-' + id + '">' + imageText + '</title>',
+    '<defs>',
+    '<linearGradient id="edge-' + id + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8e8"/><stop offset="0.65" stop-color="#f0dcc0"/><stop offset="1" stop-color="#d7b993"/></linearGradient>',
+    '<radialGradient id="white-' + id + '" cx="35%" cy="27%" r="78%"><stop offset="0" stop-color="#fffef6"/><stop offset="0.63" stop-color="#fff7e8"/><stop offset="1" stop-color="#ead9be"/></radialGradient>',
+    '<radialGradient id="yolk-' + id + '" cx="42%" cy="35%" r="67%"><stop offset="0" stop-color="' + art.center + '"/><stop offset="0.7" stop-color="' + art.middle + '"/><stop offset="1" stop-color="' + art.rim + '"/></radialGradient>',
+    '<radialGradient id="wet-' + id + '" cx="40%" cy="31%" r="70%"><stop offset="0" stop-color="' + art.wet + '"/><stop offset="1" stop-color="' + art.wetEdge + '"/></radialGradient>',
+    '<filter id="soft-' + id + '" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2"/></filter>',
+    '<clipPath id="yolk-clip-' + id + '"><ellipse cx="90" cy="121" rx="42" ry="40"/></clipPath>',
+    '</defs>',
+    '<path d="M90 12 C128 12 160 55 166 103 C173 160 144 207 90 210 C36 207 7 160 14 103 C20 55 52 12 90 12 Z" fill="url(#edge-' + id + ')" stroke="#c9aa82" stroke-width="1.5"/>',
+    '<path d="M90 22 C123 22 151 59 156 105 C163 156 136 197 90 199 C44 197 17 156 24 105 C29 59 57 22 90 22 Z" fill="url(#white-' + id + ')" stroke="#fff9ec" stroke-width="2"/>',
+    '<path d="M30 100 C35 61 60 29 91 27" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.45" stroke-linecap="round"/>',
+    '<ellipse cx="91" cy="124" rx="48" ry="46" fill="#ad7a43" opacity="0.15" filter="url(#soft-' + id + ')"/>',
+    '<ellipse cx="90" cy="121" rx="43" ry="41" fill="#f8e5b3" opacity="0.78"/>',
+    '<ellipse cx="90" cy="121" rx="42" ry="40" fill="url(#yolk-' + id + ')" stroke="' + yolkOutline + '" stroke-width="1.2"/>',
+    '<g clip-path="url(#yolk-clip-' + id + ')">',
+    moistCenter,
+    '<path d="M109 91 C127 103 130 131 113 148" fill="none" stroke="' + yolkShade + '" stroke-width="7" opacity="0.11" stroke-linecap="round" filter="url(#soft-' + id + ')"/>',
+    texture,
+    shine,
+    '</g>',
+    '</svg>'
+  ].join("");
 }
 
 function renderCards() {

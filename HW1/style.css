@@ -129,7 +129,7 @@ button:focus-visible, input:focus-visible + .switch, h2:focus-visible {
 .minute-badge { padding: 7px 10px; border-radius: 99px; color: var(--teal); background: #e8f1ed; font-size: .75rem; font-weight: 800; white-space: nowrap; }
 .card-number { color: #a8b5b1; font-size: .75rem; font-weight: 800; letter-spacing: .08em; }
 .egg-art { display: grid; place-items: center; min-height: 142px; }
-.egg-art svg { display: block; width: 120px; height: 140px; filter: drop-shadow(0 12px 10px rgba(90, 63, 38, .12)); }
+.egg-art svg { display: block; width: 120px; height: 140px; filter: drop-shadow(0 8px 7px rgba(95, 70, 45, .16)); }
 .egg-card h3 { margin: 0 0 6px; font-size: 1.19rem; letter-spacing: -.035em; }
 .egg-card p { margin: 0 0 18px; color: var(--muted); font-size: .87rem; line-height: 1.45; }
 .card-button, .primary-button {
@@ -169,7 +169,7 @@ button:focus-visible, input:focus-visible + .switch, h2:focus-visible {
 .stage-status { min-height: 1.5em; margin: 16px 0 0; color: var(--teal); font-weight: 750; }
 .demo-note { margin: 18px 0 0; color: var(--muted); font-size: .84rem; }
 .result-art { display: grid; place-items: center; height: 275px; margin: 13px auto 0; }
-.result-art svg { width: 220px; height: 255px; filter: drop-shadow(0 16px 13px rgba(90, 63, 38, .13)); }
+.result-art svg { width: 220px; height: 255px; filter: drop-shadow(0 11px 12px rgba(95, 70, 45, .15)); }
 .result-minutes { margin: 0; color: var(--orange-dark); font-weight: 850; text-transform: uppercase; letter-spacing: .13em; font-size: .8rem; }
 .result-texture { margin: 9px 0 22px; font-size: 1.13rem; font-weight: 700; }
 .serving-box { display: flex; justify-content: center; align-items: flex-start; gap: 12px; margin: 0 0 24px; padding: 16px; border-radius: 16px; color: var(--teal); background: #eaf3ee; text-align: left; }

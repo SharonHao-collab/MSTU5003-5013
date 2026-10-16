@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f0e8" />
+    <title>Are You Still Listening? | Phone Notifications and Conversation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <p class="eyebrow">MSTU 5003 · Represent a Phenomenon</p>
+        <h1>Are you still listening?</h1>
+        <p class="intro-copy">You asked a question. Their phone lit up. What happens to the conversation next?</p>
+      </header>
+
+      <div class="layout">
+        <section class="experience" aria-labelledby="experience-title">
+          <div class="section-heading">
+            <span class="section-number">01</span>
+            <h2 id="experience-title">Experience the conversation</h2>
+          </div>
+
+          <div class="scene" id="scene" data-phase="ready" data-gaze="you">
+            <div class="scene-topline">
+              <span class="location-tag">A weekend café</span>
+              <span class="scene-progress" id="scene-progress">Ready to begin</span>
+            </div>
+
+            <div class="scene-art" aria-hidden="true">
+              <div class="window">
+                <span class="sun"></span>
+                <span class="window-line"></span>
+              </div>
+              <div class="person">
+                <div class="head">
+                  <div class="hair"></div>
+                  <div class="face">
+                    <span class="eye eye-left"></span>
+                    <span class="eye eye-right"></span>
+                    <span class="mouth"></span>
+                  </div>
+                </div>
+                <div class="body"></div>
+              </div>
+              <div class="table-surface"></div>
+              <div class="cup"><span class="cup-handle"></span></div>
+              <div class="phone" id="phone" data-alert="none">
+                <span class="phone-camera"></span>
+                <span class="phone-screen" id="phone-screen">Phone</span>
+              </div>
+            </div>
+
+            <div class="dialogue" aria-live="polite" aria-atomic="true">
+              <p class="speaker" id="speaker">Ready?</p>
+              <p class="spoken-line" id="spoken-line">Choose a notification, then ask your question.</p>
+            </div>
+
+            <p class="scene-note" id="scene-note" aria-live="polite">You are sitting face to face. The conversation is about to begin.</p>
+          </div>
+
+          <div class="observations" aria-label="Observable behavior right now">
+            <div class="observation">
+              <span>Their gaze</span>
+              <strong id="gaze-value">Looking at you</strong>
+            </div>
+            <div class="observation">
+              <span>Verbal response</span>
+              <strong id="speech-value">Not started</strong>
+            </div>
+            <div class="observation">
+              <span>Conversation</span>
+              <strong id="conversation-value">Ready to begin</strong>
+            </div>
+          </div>
+        </section>
+
+        <aside class="control-panel" aria-labelledby="controls-title">
+          <div class="section-heading">
+            <span class="section-number">02</span>
+            <h2 id="controls-title">Choose a notification</h2>
+          </div>
+
+          <fieldset class="choices" id="scenario-choices">
+            <legend>Experience one scenario at a time</legend>
+            <label class="choice" for="casual">
+              <input type="radio" id="casual" name="scenario" value="casual" checked />
+              <span class="choice-content">
+                <span class="choice-title">A · App notification</span>
+                <span class="choice-description">The screen lights up briefly</span>
+              </span>
+            </label>
+            <label class="choice" for="call">
+              <input type="radio" id="call" name="scenario" value="call" />
+              <span class="choice-content">
+                <span class="choice-title">B · Incoming call</span>
+                <span class="choice-description">The phone rings, then the call is declined</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <button class="start-button" id="start-button" type="button">Ask your question <span aria-hidden="true">↗</span></button>
+          <button class="sound-button" id="sound-button" type="button" aria-pressed="true">Sound: On</button>
+
+          <div class="question-card">
+            <span class="question-label">Your question</span>
+            <p>“Where should we go this weekend?”</p>
+          </div>
+
+          <div class="reflection" id="reflection" hidden>
+            <span class="reflection-label">After the experience</span>
+            <p id="reflection-text"></p>
+            <button id="other-button" type="button">Try the other scenario <span aria-hidden="true">→</span></button>
+          </div>
+        </aside>
+      </div>
+
+      <section class="context" aria-labelledby="context-title">
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <h2 id="context-title">What does this model preserve?</h2>
+        </div>
+        <p>It preserves the relationship between a notification, the other person's gaze, their response, and the length of a pause. In the call scenario, you experience about 12 seconds of silence yourself.</p>
+        <p class="limitation">It does not show who is calling, what the message says, or the person's habits. It cannot prove that calls always interrupt conversations.</p>
+      </section>
+
+      <footer>An interactive model based on a real conversation over a meal · HTML / CSS / JavaScript</footer>
+    </main>
+  </body>
+</html>

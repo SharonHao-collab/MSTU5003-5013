@@ -1,4 +1,3 @@
-```markdown
 # Are You Still Listening?
 
 A single-page interactive model built with HTML, CSS, and JavaScript. It explores how a face-to-face conversation may continue or pause after a phone notification appears.
@@ -23,4 +22,3 @@ The page uses no external assets and does not collect or send data. If the brows
 ## Design Focus
 
 Both scenarios begin with the same question. With an ordinary app notification, the other person looks at the phone but continues answering. With an incoming call, they decline the call, type, pause, and answer later. The model focuses on three observable features: gaze, verbal response, and waiting time. It does not show who sent the notification or what it says, so it cannot establish that the notification type caused the difference in behavior.
-```

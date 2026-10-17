@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A guest registration design prototype for Teachers College."><title>TC Guest Registration</title>
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+<header class="masthead"><a class="wordmark" href="./index.html" aria-label="Return to registration home"><span class="monogram" aria-hidden="true">TC</span><span>Teachers College<small>Columbia University</small></span></a><span class="prototype">DESIGN PROTOTYPE · DEMO</span></header>
+<main class="page-shell">
+<header class="hero"><p class="eyebrow">WELCOME TO TEACHERS COLLEGE</p><h1>TC Guest Registration<span>Every visit starts here.</span></h1><p class="intro">Tell us your name, when you plan to visit, and what brings you to TC.</p></header>
+<div class="layout">
+<aside class="visit-note"><span class="note-icon" aria-hidden="true">↗</span><h2>We look forward to meeting you</h2><p>A conversation, an event, or a new discovery. Tell us what brings you here.</p></aside>
+<section class="form-card" aria-labelledby="details-title">
+<div id="registration"><div class="card-heading"><div><p class="eyebrow">YOUR VISIT</p><h2 id="details-title">Your visit</h2></div><span class="step">01 / 01</span></div>
+<form id="visit-form">
+<div class="field"><label for="guest-name">Name <span>*</span></label><input id="guest-name" name="name" autocomplete="name" required maxlength="100" placeholder="Enter your full name"></div>
+<div class="field-row"><div class="field"><label for="visit-date">Visit date <span>*</span></label><input id="visit-date" name="date" type="date" required></div><div class="field"><label for="visit-time">Visit time <span>*</span></label><input id="visit-time" name="time" type="time" required></div></div>
+<div class="field"><label for="visit-reason">Reason for visiting <span>*</span></label><textarea id="visit-reason" name="reason" rows="4" required maxlength="2000" aria-describedby="reason-hint" placeholder="For example: attending a lecture, meeting a professor, or visiting campus"></textarea><p class="hint" id="reason-hint">Briefly describe the purpose of your visit.</p></div>
+<button class="submit" type="submit">Submit registration <span aria-hidden="true">→</span></button><p class="privacy">Demo mode · Your information is not saved or sent</p>
+</form></div>
+<div id="confirmation" hidden><span class="success-icon" aria-hidden="true">✓</span><p class="eyebrow">WELCOME TO TC</p><h2 tabindex="-1" id="confirmation-title">Welcome to TC</h2><button class="submit" type="button" id="restart">Back to registration <span aria-hidden="true">↩</span></button></div>
+</section></div><footer class="page-footer">TC Guest Registration · Web design learning project<span>A clear beginning for every visit.</span></footer>
+</main></body></html>

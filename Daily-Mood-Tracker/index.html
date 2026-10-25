@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fbf7f4" />
+  <meta name="description" content="A gentle space to check in with your feelings and reflect on the little moments of everyday life." />
+  <title>Daily Mood Tracker — Your Daily Pause</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" aria-label="Site header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">✿</span>
+        <span>daily mood tracker</span>
+      </div>
+      <span class="header-date" id="header-date"></span>
+    </header>
+
+    <main class="main-content">
+      <section class="welcome" aria-labelledby="welcome-title">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> A moment just for you</p>
+        <h1 id="welcome-title">Welcome to your daily pause. 🤍</h1>
+        <p class="welcome-description">No pressure to feel a certain way. Just a little time to notice how you're doing.</p>
+      </section>
+
+      <div class="main-card">
+        <form id="mood-form" novalidate>
+          <section class="form-section" aria-labelledby="mood-title">
+            <div class="section-heading">
+              <span class="section-number" aria-hidden="true">01</span>
+              <div>
+                <h2 id="mood-title">How have you been feeling lately?</h2>
+                <p>Choose whichever feels closest. Every feeling belongs here.</p>
+              </div>
+            </div>
+
+            <fieldset class="mood-options">
+              <legend class="sr-only">Choose your mood</legend>
+
+              <label class="mood-option">
+                <input type="radio" name="mood" value="happy" />
+                <span class="mood-tile">
+                  <span class="mood-emoji" aria-hidden="true">😊</span>
+                  <span class="mood-name">Happy</span>
+                </span>
+              </label>
+
+              <label class="mood-option">
+                <input type="radio" name="mood" value="calm" />
+                <span class="mood-tile">
+                  <span class="mood-emoji" aria-hidden="true">😌</span>
+                  <span class="mood-name">Calm</span>
+                </span>
+              </label>
+
+              <label class="mood-option">
+                <input type="radio" name="mood" value="okay" />
+                <span class="mood-tile">
+                  <span class="mood-emoji" aria-hidden="true">😐</span>
+                  <span class="mood-name">Okay</span>
+                </span>
+              </label>
+
+              <label class="mood-option">
+                <input type="radio" name="mood" value="low" />
+                <span class="mood-tile">
+                  <span class="mood-emoji" aria-hidden="true">😔</span>
+                  <span class="mood-name">Low</span>
+                </span>
+              </label>
+
+              <label class="mood-option">
+                <input type="radio" name="mood" value="overwhelmed" />
+                <span class="mood-tile">
+                  <span class="mood-emoji" aria-hidden="true">😵‍💫</span>
+                  <span class="mood-name">Overwhelmed</span>
+                </span>
+              </label>
+            </fieldset>
+          </section>
+
+          <div class="soft-divider" aria-hidden="true"></div>
+
+          <section class="form-section journal-section" aria-labelledby="journal-title">
+            <div class="section-heading">
+              <span class="section-number" aria-hidden="true">02</span>
+              <div>
+                <h2 id="journal-title">A little space for your thoughts. ☁️</h2>
+                <p>A sentence, a story, or nothing at all. It's up to you.</p>
+              </div>
+            </div>
+
+            <label class="sr-only" for="journal-entry">Your thoughts</label>
+            <textarea
+              id="journal-entry"
+              name="journal"
+              rows="5"
+              maxlength="2000"
+              placeholder="What's been on your mind? You can write freely here..."
+            ></textarea>
+
+            <div class="form-footer">
+              <p class="privacy-note"><span aria-hidden="true">♡</span> Your words stay in this browser.</p>
+              <button type="submit" class="save-button" id="save-button">
+                <span id="save-button-text">Save My Mood</span>
+                <span class="button-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </section>
+        </form>
+      </div>
+
+      <section class="history-section" aria-labelledby="history-title">
+        <div class="history-heading">
+          <div>
+            <p class="eyebrow">Little moments, collected</p>
+            <h2 id="history-title">Previous Mood Entries</h2>
+          </div>
+          <span class="history-ornament" aria-hidden="true">✧</span>
+        </div>
+
+        <div class="empty-state" id="empty-state">
+          <span class="empty-state-icon" aria-hidden="true">☁</span>
+          <p>Nothing here yet, and that's okay.</p>
+          <span>Your check-ins will appear here whenever you're ready.</span>
+        </div>
+        <ul class="entry-list" id="entry-list" aria-label="Saved mood entries"></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">One day at a time. <span aria-hidden="true">✿</span></footer>
+  </div>
+</body>
+</html>
